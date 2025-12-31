@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors */
+  --color-primary: #671e5a;
+  --color-primary-dark: #2a056d;
+  --color-primary-light: #6f0767;
+  --color-accent: #c445a6;
+  --color-accent-light: #f652cf;
+
+  /* Custom Font */
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Circular text animation styles */
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 15.5px;
+  transform-origin: 0 60px;
+}
+
+/* Hide scrollbar for mobile menu */
+.mobile-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D Text Effect - Soft Rounded Style */
+.text-3d {
+  color: #ffeae6 !important;
+  text-shadow:
+    /* Soft peachy/coral shadow layers for depth */ 1px 1px 0
+      #ffb8a8,
+    2px 2px 0 #ffb0a0, 3px 3px 0 #ffa898, 4px 4px 0 #ffa090, 5px 5px 0 #ff9888,
+    6px 6px 0 #ff9080, 7px 7px 0 #ff8878, 8px 8px 0 #ff8070, 9px 9px 0 #ff7868,
+    10px 10px 0 #ff7060,
+    /* Soft shadow blur for smooth transition */
+      /* 11px 11px 10px rgba(255, 107, 96, 0.4),
+    15px 15px 20px rgba(255, 107, 96, 0.3),
+    20px 20px 30px rgba(255, 107, 96, 0.2); */
+      11px 11px 10px rgba(44, 44, 44, 0.4),
+    15px 15px 20px rgba(0, 0, 0, 0.3), 20px 20px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive adjustments for circular text */
+@media (max-width: 768px) {
+  .text span {
+    font-size: 12px;
+    transform-origin: 0 50px;
+  }
+
+  .circle {
+    width: 100px !important;
+    height: 100px !important;
+    top: -3rem !important;
+  }
+
+  .circle svg {
+    width: 24px;
+    height: 30px;
+  }
+
+  .text-3d {
+    text-shadow: 1px 1px 0 #ffb8a8, 2px 2px 0 #ffb0a0, 3px 3px 0 #ffa898,
+      4px 4px 0 #ffa090, 5px 5px 0 #ff9888, 6px 6px 5px rgba(255, 107, 96, 0.4),
+      8px 8px 10px rgba(255, 107, 96, 0.3);
+  }
+}
