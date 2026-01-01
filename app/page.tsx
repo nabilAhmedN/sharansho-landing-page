@@ -4,6 +4,7 @@ import { useState } from "react";
 // import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import Marquee from "@/components/Marquee";
 // import { ArrowDownRight, ArrowDownRightFromCircle } from "lucide-react";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
     <div className="bg-white">
       {/* Hero Section with Integrated Navbar */}
       <section
-        className="text-white m-4 rounded-2xl relative"
+        className="text-white m-4 rounded-2xl relative overflow-hidden"
         style={{
           background: `linear-gradient(to top left, rgba(255, 194, 161, 0.92), rgba(255, 107, 96, 0.92)), url(/images/World_map_with_points.svg.png)`,
           backgroundSize: "cover",
@@ -156,60 +157,65 @@ export default function Home() {
           )}
 
           {/* Hero Content */}
-          <div className="relative text-center mt-16 md:mt-[128px]">
-            {/* <div className="flex justify-center space-x-4 md:space-x-0 mb-4 md:mb-0">
-              <span className="transform rotate-[-15deg] md:rotate-[-25deg] md:absolute md:left-40 md:top-50 bg-blue-600 text-white px-4 py-1 rounded-full text-xs md:text-sm font-semibold shadow-md">
-                #Question
-              </span>
-              <span className="transform rotate-[15deg] md:rotate-[25deg] md:absolute md:right-40 md:top-50 bg-purple-600 text-white px-4 py-1 rounded-full text-xs md:text-sm font-semibold shadow-md">
-                #SAT 1
-              </span>
-            </div> */}
+          <div className="mx-6 md:mx-[48px] mt-16 md:mt-[128px]">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+              {/* Left Side - Text and Button */}
+              <div className="flex-1 text-center md:text-left">
+                <h1 className="text-4xl md:text-[200px] font-bold leading-tight md:leading-none text-3d">
+                  Sharansho
+                </h1>
 
-            <h1 className="text-4xl md:text-[213px] font-bold leading-tight md:leading-none">
-              Sharansho
-            </h1>
+                <p className="mt-8 md:mt-16 text-base md:text-4xl text-white">
+                  Understand the bias. <br />
+                  <span
+                    className="text-black font-bold bg-cover bg-center bg-no-repeat px-6 py-2 inline-block"
+                    style={{ backgroundImage: "url(/images/truth-bg.png)" }}
+                  >
+                    Discover the truth.
+                  </span>
+                </p>
 
-            <p className="mt-16 text-base md:text-4xl max-w-md md:max-w-xl mx-auto text-white">
-              Understand the bias. <br />
-              <span
-                className="text-black font-bold bg-cover bg-center bg-no-repeat px-6 py-2 inline-block"
-                style={{ backgroundImage: "url(/images/truth-bg.png)" }}
-              >
-                Discover the truth.
-              </span>
-            </p>
+                <div className="mt-8 md:mt-28 flex justify-center md:justify-start">
+                  <Link href="">
+                    <button className="group flex items-center justify-evenly bg-white text-black font-medium rounded-2xl pl-6 pr-4 py-2 shadow-lg text-lg">
+                      Download app
+                      <span className="relative flex items-center justify-center ml-4 w-12 h-12 bg-[#ff8e78] text-white rounded-xl -rotate-45 group-hover:rotate-0 transition-all duration-300">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="rotate-45 group-hover:rotate-0 transition-all duration-300"
+                        >
+                          <path d="M12 15V3" />
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                          <path d="m7 10 5 5 5-5" />
+                        </svg>
+                      </span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
 
-            <div className="mt-15 flex flex-col justify-center items-center space-y-12">
-              <div className="relative inline-block">
-                <Link href="">
-                  <button className="group flex items-center justify-evenly bg-white text-black font-medium rounded-2xl pl-6 pr-4 py-2 shadow-lg text-lg">
-                    Download app
-                    <span className="relative flex items-center justify-center ml-4 w-12 h-12 bg-[#ff8e78] text-white rounded-xl -rotate-45 group-hover:rotate-0 transition-all duration-300">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="rotate-45 group-hover:rotate-0 transition-all duration-300"
-                      >
-                        <path d="M12 15V3" />
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                        <path d="m7 10 5 5 5-5" />
-                      </svg>
-                    </span>
-                  </button>
-                </Link>
+              {/* Right Side - iPhone Image */}
+              <div className="shrink-0 hidden md:block">
+                <Image
+                  src="/images/iPhone 13.png"
+                  alt="iPhone mockup"
+                  width={450}
+                  height={900}
+                  className="w-auto h-auto max-h-[700px]"
+                />
               </div>
             </div>
           </div>
 
-          <div className="mx-6 md:mx-[48px] mt-24 md:mt-[140px] flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 pb-4">
+          <div className="mx-6 md:mx-[48px] mt-24 md:mt-[80px] flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 pb-4">
             <button className="group flex items-center cursor-pointer bg-black rounded-l-[24px] rounded-r-[16px] gap-4 pr-2 transition-all duration-300">
               <div className="bg-[#4a4a4a] rounded-[24px] p-[4px] transition-all duration-300">
                 <div className="px-8 py-3 rounded-[20px] border border-white/10 transition-all duration-300 text-xl flex items-center">
@@ -237,8 +243,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative">
-          {/* <div className="circle absolute left-[50%] transform -translate-x-1/2 top-[-4rem] w-[121px] h-[121px] bg-[#c44580] rounded-full flex items-center justify-center">
+        {/* <div className="relative">
+          <div className="circle absolute left-[50%] transform -translate-x-1/2 top-[-4rem] w-[121px] h-[121px] bg-[#c44580] rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -250,7 +256,7 @@ export default function Home() {
                 d="M0.135922 28.788C8.6934 23.8473 10.6449 11.2066 4.49468 0.554143C10.6449 11.2066 22.5678 15.8369 31.1253 10.8963C22.5678 15.8369 20.6163 28.4777 26.7665 39.1301C20.6163 28.4777 8.6934 23.8473 0.135922 28.788Z"
                 fill="white"
               />
-            </svg> */}
+            </svg>
           <div className="absolute left-[50%] transform -translate-x-1/2 -top-20 w-[160px] h-[160px]">
             <Image
               src="/gif/news.gif"
@@ -261,8 +267,11 @@ export default function Home() {
               unoptimized
             />
           </div>
-        </div>
+        </div> */}
       </section>
+
+      {/* Marquee Section */}
+      <Marquee />
 
       {/* AI Features Section */}
       {/* <section className="bg-[#F7E8F5] flex justify-center m-2 sm:m-4 rounded-2xl">

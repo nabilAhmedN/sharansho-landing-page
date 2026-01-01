@@ -38,16 +38,16 @@ body {
 .text-3d {
   color: #ffeae6 !important;
   text-shadow:
-    /* Soft peachy/coral shadow layers for depth */ 1px 1px 0
-      #ffb8a8,
+    /* Soft peachy/coral shadow layers for depth */
+    1px 1px 0 #ffb8a8,
     2px 2px 0 #ffb0a0, 3px 3px 0 #ffa898, 4px 4px 0 #ffa090, 5px 5px 0 #ff9888,
     6px 6px 0 #ff9080, 7px 7px 0 #ff8878, 8px 8px 0 #ff8070, 9px 9px 0 #ff7868,
     10px 10px 0 #ff7060,
     /* Soft shadow blur for smooth transition */
-      /* 11px 11px 10px rgba(255, 107, 96, 0.4),
+    /* 11px 11px 10px rgba(255, 107, 96, 0.4),
     15px 15px 20px rgba(255, 107, 96, 0.3),
     20px 20px 30px rgba(255, 107, 96, 0.2); */
-      11px 11px 10px rgba(44, 44, 44, 0.4),
+    11px 11px 10px rgba(44, 44, 44, 0.4),
     15px 15px 20px rgba(0, 0, 0, 0.3), 20px 20px 30px rgba(0, 0, 0, 0.2);
   position: relative;
   display: inline-block;
@@ -77,4 +77,19 @@ body {
       4px 4px 0 #ffa090, 5px 5px 0 #ff9888, 6px 6px 5px rgba(255, 107, 96, 0.4),
       8px 8px 10px rgba(255, 107, 96, 0.3);
   }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
