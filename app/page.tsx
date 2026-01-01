@@ -15,6 +15,13 @@ export default function Home() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Section with Integrated Navbar */}
@@ -213,33 +220,37 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
 
-          <div className="mx-6 md:mx-[48px] mt-24 md:mt-[80px] flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 pb-4">
-            <button className="group flex items-center cursor-pointer bg-black rounded-l-[24px] rounded-r-[16px] gap-4 pr-2 transition-all duration-300">
-              <div className="bg-[#4a4a4a] rounded-[24px] p-[4px] transition-all duration-300">
-                <div className="px-8 py-3 rounded-[20px] border border-white/10 transition-all duration-300 text-xl flex items-center">
-                  Discovery
+            <div className="mt-24 md:mt-[80px] flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 pb-4">
+              <button
+                onClick={handleScrollToAbout}
+                className="group flex items-center cursor-pointer bg-black rounded-l-[24px] rounded-r-[16px] gap-4 pr-2 transition-all duration-300 "
+              >
+                <div className="bg-[#4a4a4a] rounded-[24px] p-[4px] transition-all duration-300">
+                  <div className="px-8 py-3 rounded-[20px] border border-white/10 transition-all duration-300 text-xl flex items-center">
+                    Discovery
+                  </div>
                 </div>
-              </div>
-              <span className="bg-[#ff8e78] p-[9px] rounded-[12px] transition-all duration-300 group-hover:rotate-45 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-white w-8 h-8"
-                >
-                  <path d="M18 8L22 12L18 16" />
-                  <path d="M2 12H22" />
-                </svg>
-              </span>
-            </button>
+                <span className="bg-[#ff8e78] p-[9px] rounded-[12px] transition-all duration-300 group-hover:rotate-45 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white w-8 h-8"
+                  >
+                    <path d="M18 8L22 12L18 16" />
+                    <path d="M2 12H22" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
           </div>
         </div>
 
@@ -273,118 +284,52 @@ export default function Home() {
       {/* Marquee Section */}
       <Marquee />
 
-      {/* AI Features Section */}
-      {/* <section className="bg-[#F7E8F5] flex justify-center m-2 sm:m-4 rounded-2xl">
-        <div className="container max-w-6xl px-4 py-8 sm:py-[120px]">
-          <div className="flex flex-col items-center text-center mb-8 sm:mb-[40px]">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4">
-              <span className="text-black">Smarter </span>
-              <span className="text-gray-500">SAT</span>
-            </h1>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-2 sm:mb-3 flex flex-wrap justify-center items-center gap-1 sm:gap-2">
-              <span className="text-black relative inline-block pb-1 sm:pb-2 z-[10]">
-                Preparation with
-                <svg
-                  className="absolute right-0 sm:right-20 bottom-0 w-full h-2 sm:h-[10px] -z-[10] pointer-events-none"
-                  viewBox="0 0 200 10"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 5 Q 50 0, 100 5 T 200 5"
-                    stroke="#C445A6"
-                    strokeWidth="3"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-              <span className="text-purple-600">AI</span>
-              <span className="text-purple-600 h-6 w-6 sm:h-8 sm:w-8 flex items-center justify-center">
-                ✨
-              </span>
-            </h2>
-            <p className="text-sm sm:text-[16px] font-medium text-black mt-2">
-              You&apos;ll spend less time guessing and more time mastering the
-              SAT.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-[1.5fr_2fr] gap-4 sm:gap-6">
-            <div className="border-2 border-dashed border-[#D0D5DD] rounded-xl p-4 sm:p-[32px]">
-              <div className="flex flex-col h-full">
-                <div className="mb-3 sm:mb-[16px]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="36"
-                    height="36"
-                    viewBox="0 0 36 36"
-                    fill="none"
-                    className="w-6 h-6 sm:w-9 sm:h-9"
-                  >
-                    <path
-                      d="M8.1488 23.0001C7.51812 21.5824 7.1665 20.0052 7.1665 18.3432C7.1665 12.1706 12.0168 7.16675 17.9998 7.16675C23.9829 7.16675 28.8332 12.1706 28.8332 18.3432C28.8332 20.0052 28.4815 21.5824 27.8509 23.0001"
-                      stroke="#141B34"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+      {/* about Section */}
+      <div id="about-section" className="bg-[#ffc6a8] flex justify-center m-4 rounded-2xl overflow-hidden p-4 md:p-8">
+        <div className="m-6 md:m-12">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Left Side - Phone Mockups with Purple Background */}
+            <div className="flex-1 relative">
+              <div className="bg-linear-to-br from-[#ffffff] to-[#f3f0ff] rounded-3xl p-12 lg:p-16 relative">
+                {/* Decorative circle with arrow */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-0 h-0 border-l-20 border-l-transparent border-r-20 border-r-transparent border-b-30 border-b-black" />
                 </div>
-                <h3 className="text-xl sm:text-2xl md:text-[36px] font-medium mb-2 leading-tight sm:leading-[44px]">
-                  Ask Through <br />
-                  <span className="text-[#49066a]">Image or Text</span>
-                </h3>
-                <p className="text-gray-600 mt-6 sm:mt-[100px] text-sm sm:text-[20px] font-normal">
-                  Easily ask questions by uploading an image or typing your
-                  query—our AI handles both seamlessly.
-                </p>
-                <div className="mt-3 sm:mt-[14px]">
-                  <button className="flex items-center justify-between w-full text-[#4F46F4] font-medium text-sm sm:text-[18px]">
-                    <span>Get started today</span>
-                    <span>→</span>
-                  </button>
+
+                {/* Phone image */}
+                <div className="relative flex justify-center">
+                  <img
+                    src="/images/iPhone 16 1.png"
+                    alt="Task Manager App Screens"
+                    className="w-full h-auto max-w-[600px]"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#291548] rounded-xl p-4 sm:p-6 flex items-center justify-center">
-              <div className="bg-white rounded-lg w-full max-w-md p-3 sm:p-4">
-                <div className="mb-2">
-                  <p className="text-base sm:text-lg">
-                    Hi <span className="text-pink-500 font-bold">Habiba</span>!
-                  </p>
-                  <p className="text-xs sm:text-sm text-gray-500">
-                    What would you like to know?
-                  </p>
-                </div>
-                <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
-                  You&apos;ll spend less time guessing and more time mastering
-                  the SAT.
-                </p>
-                <div className="border border-gray-200 rounded-md p-3 sm:p-4 h-32 sm:h-40 mb-3 sm:mb-4">
-                  <p className="text-gray-400 text-xs sm:text-sm">
-                    Ask whatever you want...
-                  </p>
-                  <div className="flex justify-between items-center pt-12 sm:pt-[90px]">
-                    <div className="flex gap-1 sm:gap-2">
-                      <button className="text-gray-500 text-xs sm:text-sm flex items-center gap-1">
-                        📎 Add attachment
-                      </button>
-                      <button className="text-gray-500 text-xs sm:text-sm flex items-center gap-1">
-                        🖼️ Upload image
-                      </button>
-                    </div>
-                    <div className="flex items-center gap-1 sm:gap-2">
-                      <span className="text-xs text-gray-400">0/1000</span>
-                      <button className="bg-[#671E5A] text-white rounded p-1 sm:p-[6px] flex items-center justify-center">
-                        ➤
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Right Side - Content */}
+            <div className="flex-1 space-y-6 lg:space-y-8 px-4 lg:px-0">
+              <p className="text-sm lg:text-base uppercase tracking-[0.2em] opacity-60 font-medium">
+                About App
+              </p>
+
+              <h2 className="text-4xl lg:text-6xl xl:text-[55px] font-bold leading-[70px]">
+                Stay informed, clearly and quickly
+              </h2>
+
+              <p className="text-lg lg:text-[18px] xl:text-[20px] leading-[28px] opacity-80">
+                Sharansho brings together headlines from multiple newspapers in one place, giving you a complete view of every important story. Instead of reading long articles from different sources, you get clear, concise summaries that save time and reduce information overload. By showing how different outlets cover the same news, Sharansho helps you understand the full picture and stay informed with confidence—anytime, anywhere.
+              </p>
+
+              <button className="bg-white text-black font-semibold px-10 py-4 rounded-[15px] text-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 shadow-lg active:scale-95">
+                Try for Free
+              </button>
             </div>
           </div>
         </div>
-      </section> */}
+      </div>
+
 
       {/* All in One Place Section */}
       {/* <section className="py-10 px-5">
