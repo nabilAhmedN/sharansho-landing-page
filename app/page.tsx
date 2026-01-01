@@ -331,321 +331,197 @@ export default function Home() {
       </div>
 
 
-      {/* All in One Place Section */}
-      {/* <section className="py-10 px-5">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[76px] font-semibold leading-tight text-center">
-              <span className="relative inline-block pb-2 z-[10]">
-                EVERYTHING
-                <svg
-                  className="absolute left-0 bottom-0 w-full h-2 sm:h-[10px] -z-[10] pointer-events-none"
-                  viewBox="0 0 200 10"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 5 Q 50 0, 100 5 T 200 5"
-                    stroke="#C445A6"
-                    strokeWidth="3"
-                    fill="none"
-                  />
-                </svg>
-              </span>{' '}
-              YOU NEED <br />
-              <span className="text-gray-500">ALL in ONE PLACE</span>
-              <br />
-            </h1>
-            <p className="text-base text-gray-600 mt-2">
-              Comprehensive syllabus covers all three sections of the SAT
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            {[
-              'Latest EXAM Bank',
-              'Tailored Exam',
-              'Video Explanation',
-              'Benchmark against other student',
-              { title: 'Real EXAM Predictions', ai: true },
-              { title: 'Full Courses', ai: true },
-              { title: '10,000+ Questions Bank with Explanations', ai: true },
-              { title: 'Improvement Report', ai: true },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-gray-50 rounded-lg p-5 shadow-md relative min-h-[220px] sm:min-h-[150px]"
-              >
-                <div className="absolute top-5 left-5 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">
-                    {idx === 0 ? '📚' : idx === 1 ? '📝' : idx === 2 ? '🎥' : '📊'}
-                  </span>
-                </div>
-                <div className="absolute top-[132px] left-5 sm:absolute sm:bottom-5 sm:left-5 sm:top-auto sm:pt-6">
-                  {typeof item === 'object' && item.ai && (
-                    <div className="text-sm text-indigo-500 mb-1">✨ AI POWERED</div>
-                  )}
-                  <div className="text-lg font-bold text-gray-800">
-                    {typeof item === 'string' ? item : item.title}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Pricing Section */}
-      {/* <section className="bg-gradient-to-tl from-[#2A056D] to-[#6F0767] flex justify-center m-2 sm:m-4 rounded-2xl">
-        <div className="container max-w-6xl px-4 py-12 sm:py-[120px]">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[76px] font-semibold text-white leading-tight text-center">
-            Flexible
-            <span className="relative inline-block pb-2 z-[10] mx-2">
-              Pricing
-              <svg
-                className="absolute left-0 bottom-0 w-full h-2 sm:h-[10px] -z-[10] pointer-events-none"
-                viewBox="0 0 200 10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 5 Q 50 0, 100 5 T 200 5" stroke="#C445A6" strokeWidth="3" fill="none" />
-              </svg>
-            </span>
-            for
-            <br />
-            SAT 1 Learners
-          </h1>
-          <p className="mt-3 sm:mt-[12px] text-white text-center text-sm sm:text-base">
-            Choose the plan that fits your budget
-          </p>
-          <div className="mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              { name: 'Monthly Plan', price: '99', save: null },
-              { name: '3 Months Plan', price: '84', save: 'Save 15%' },
-              { name: '6 Months Plan', price: '79', save: 'Save 20%' },
-              { name: 'Yearly Plan', price: '74', save: 'Save 25%' },
-            ].map((plan, idx) => (
-              <div key={idx} className="bg-white text-purple-800 p-4 sm:p-6 rounded-lg shadow">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-base sm:text-[18px] text-black font-semibold">
-                    {plan.name}
-                  </h3>
-                  {plan.save && (
-                    <div className="text-xs sm:text-[12px] text-white font-semibold bg-[#671E5A] px-2 sm:px-[12px] py-1 rounded-full">
-                      {plan.save}
+      <section className="bg-[#ff796e] text-white m-4 rounded-2xl overflow-hidden">
+        <div className="p-8 md:p-16">
+          {/* Pricing Header */}
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">
+            Choose your favorite plan
+          </h2>
+
+          {/* Pricing Table */}
+          <div className="overflow-hidden">
+            <table className="w-full">
+              <thead className="bg-[#ffc6a8] ">
+                <tr className="">
+                  <th className="text-left text-xl p-6 font-medium text-white">Subscription level</th>
+                  <th className="p-6">
+                    <div className="bg-[#a8e6a1] text-black px-6 py-2 rounded-full inline-flex items-center gap-2 font-semibold">
+                      <span>Basic</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
                     </div>
-                  )}
-                </div>
-                <p className="text-sm sm:text-[14px] text-[#667085] font-medium">
-                  {idx === 0
-                    ? 'Perfect for starting your journey'
-                    : idx === 1
-                      ? 'Ideal for focused preparation'
-                      : idx === 2
-                        ? 'Best for comprehensive prep'
-                        : 'Maximum value for long-term'}
-                </p>
-                <p className="text-2xl sm:text-[36px] font-bold mt-2">
-                  {plan.price}
-                  <span className="text-[#667085] text-xs sm:text-[14px] font-normal">SAR</span>
-                </p>
-                <p className="text-black text-xs sm:text-[14px]">Per user per month</p>
-                <div className="border-b border-[#D0D5DD] pt-3 sm:pt-[14px]"></div>
-                <ul className="mt-4 space-y-2 text-black text-xs sm:text-sm">
-                  {[
-                    'Access SAT 1 and SAT 2 practice questions.',
-                    'Weekly progress reports to track improvement.',
-                    '24/7 support to answer your questions.',
-                    'Personalized study plan based on AI analysis.',
-                  ].map((feature, fidx) => (
-                    <li key={fidx} className="flex items-start gap-2 pt-3">
-                      <span className="w-5 h-5 sm:w-[20px] sm:h-[20px] bg-[#671E5A] rounded-full flex items-center justify-center shrink-0">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                        >
-                          <path
-                            d="M2.5 5.99994L5 8.49994L10 3.49994"
-                            stroke="white"
-                            strokeWidth="1.125"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="https://cms.mubhir.ai/select-package">
-                  <button className="mt-8 sm:mt-[64px] border border-[#671E5A] text-[#671E5A] px-4 py-2 rounded-full w-full text-sm sm:text-base hover:bg-[#671E5A] hover:text-white transition">
-                    Start {plan.name}
+                  </th>
+                  <th className="p-6">
+                    <div className="bg-[#b8a3e8] text-black px-6 py-2 rounded-full inline-flex items-center gap-2 font-semibold">
+                      <span>Monthly</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5" />
+                        <path d="M2 12l10 5 10-5" />
+                      </svg>
+                    </div>
+                  </th>
+                  <th className="p-6">
+                    <div className="bg-[#ffd89c] text-black px-6 py-2 rounded-full inline-flex items-center gap-2 font-semibold">
+                      <span>Yearly</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                        <path d="M4 22h16" />
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                      </svg>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                  <td className="p-6 text-center">N/A</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 mt-16">
+            {/* Left Side - Text and Buttons */}
+            <div className="flex-1 space-y-8">
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+                Try it right now
+              </h2>
+              <p className="text-lg text-white leading-relaxed">
+                Download Sharansho on the App Store and discover a smarter way to read the news. Get multiple perspectives and easy-to-read summaries—all in one place.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-black hover:bg-gray-900 transition-colors px-6 py-3 rounded-xl flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                      <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-xs">Download on the</div>
+                      <div className="text-lg font-semibold">App Store</div>
+                    </div>
                   </button>
                 </Link>
+                {/* <Link href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-black hover:bg-gray-900 transition-colors px-6 py-3 rounded-xl flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                      <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z" />
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-xs">GET IT ON</div>
+                      <div className="text-lg font-semibold">Google Play</div>
+                    </div>
+                  </button>
+                </Link> */}
               </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+            </div>
 
-      {/* FAQ Section */}
-      {/* <section className="bg-[#eaecf0] flex justify-center m-4 rounded-2xl">
-        <div className="container max-w-6xl px-4 py-[120px]">
-          <h2 className="text-[56px] font-semibold text-center text-black">
-            Your
-            <span className="text-black relative inline-block pb-2 mx-2">
-              Questions
-              <svg
-                className="absolute right-0 top-16 w-full h-[13px] pointer-events-none"
-                viewBox="0 0 200 10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 5 Q 50 0, 100 5 T 200 5" stroke="#C445A6" strokeWidth="3" fill="none" />
-              </svg>
-            </span>
-            <br />
-            Answered
-          </h2>
-          <p className="mt-2 text-center text-gray-600">Frequently asked questions</p>
-          <div className="mt-10 space-y-4">
-            {[
-              {
-                q: "How does Mubhir's AI personalize my learning experience?",
-                a: 'Our AI analyzes your performance, identifies strengths and weaknesses, and tailors a study plan to maximize your score improvement.',
-              },
-              {
-                q: 'How many practice tests are included in the program?',
-                a: 'Our program includes over 20 full-length practice tests, covering all subjects and designed to simulate the actual exam environment.',
-              },
-              {
-                q: 'Can I use Mubhir on my phone or tablet?',
-                a: 'Yes, Mubhir is fully optimized for mobile devices. You can access all features on your smartphone or tablet through our responsive web app or native mobile apps.',
-              },
-              {
-                q: 'Is there a free trial available?',
-                a: 'Yes, we offer a 7-day free trial that gives you access to a limited set of practice questions and features so you can experience the platform before committing.',
-              },
-              {
-                q: "What if I'm not satisfied with the program?",
-                a: "We offer a 30-day money-back guarantee. If you're not completely satisfied with your experience, contact our support team for a full refund.",
-              },
-              {
-                q: 'Will I get support during my preparation?',
-                a: 'Absolutely! Our team of expert tutors is available 24/7 to answer your questions and provide guidance throughout your preparation journey.',
-              },
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-gray-50 p-4 rounded-lg">
-                <button
-                  className="w-full flex justify-between items-center focus:outline-none"
-                  onClick={() => toggleFaq(idx)}
-                >
-                  <h3 className="text-xl font-semibold text-[#671E5A]">{faq.q}</h3>
-                  <span className="w-9 h-9 bg-[#671E5A] rounded-full flex items-center justify-center text-white">
-                    {activeFaq === idx ? '↑' : '↓'}
-                  </span>
-                </button>
-                {activeFaq === idx && <div className="mt-4 text-gray-700">{faq.a}</div>}
+            {/* Right Side - Phone Mockup */}
+            <div className="flex-1 flex justify-center">
+              <div className="relative">
+                <Image
+                  src="/images/iPhone 13.png"
+                  alt="App Preview"
+                  width={400}
+                  height={800}
+                  className="w-auto h-auto max-h-[600px]"
+                />
               </div>
-            ))}
-          </div>
-          <p className="text-black font-medium mb-[12px] mt-[32px] text-center">
-            Still have questions?
-          </p>
-          <div className="mt-6 flex justify-center items-center space-x-6">
-            <button className="flex items-center bg-[#671e5a] text-white font-medium rounded-full pl-5 pr-2 py-2 shadow-lg">
-              Contact us
-              <span className="flex items-center justify-center ml-6 w-8 h-8 bg-white text-white rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="#671e5a"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </section> */}
-
-      {/* CTA Section */}
-      {/* <section className="bg-[#691d5e] text-white rounded-lg px-4 pt-12 md:pt-20">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-snug">
-              Get Started
-              <span className="relative inline-block pb-2 ml-2">
-                Today!
-                <svg
-                  className="absolute left-0 bottom-0 w-full h-2 -z-10 pointer-events-none"
-                  viewBox="0 0 200 10"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 5 Q 50 0, 100 5 T 200 5"
-                    stroke="#C445A6"
-                    strokeWidth="3"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </h1>
-            <p className="text-base md:text-lg">
-              Join thousands of students who are preparing smarter, not harder. Sign up now & take
-              your first mock test for FREE!
-            </p>
-
-            <button className="bg-white text-[#671E5A] font-semibold py-3 px-6 rounded-full flex items-center justify-center mx-auto md:mx-0 hover:bg-gray-100 transition">
-              Get started
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <button className="bg-[#8A2879] text-white px-6 py-2 rounded-full flex items-center hover:bg-[#d945b3] w-fit">
-              <span className="text-2xl mr-2">⭐</span>
-              <span>4.9/5 reviews in Clutch</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="order-last md:order-none flex justify-center items-center">
-            <div className="h-[350px] w-[250px] bg-purple-300 rounded-lg"></div>
-          </div>
-
-          <div className="w-full md:w-1/2 flex flex-col gap-6">
-            <div className="bg-[#511447] p-6 md:p-8 rounded-lg space-y-4">
-              <h2 className="text-2xl font-bold text-white text-center md:text-left">
-                What if I don&apos;t like it later?
-              </h2>
-              <p className="text-sm md:text-base text-center md:text-left">
-                If Mubhir isn&apos;t right for you:
-              </p>
-              <ul className="text-sm md:text-base space-y-2 list-none text-left">
-                {[
-                  'Cancel anytime within the first 7 days.',
-                  'Get a full refund - no questions asked.',
-                  'Your satisfaction and success is our priority.',
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-green-400">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
+
+      {/* Footer */}
+      <footer className="bg-white m-4 rounded-2xl overflow-hidden">
+        <div className="p-8 md:p-12">
+          {/* Footer Content */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+              {/* <Image
+                  src="/images/logo.png"
+                  alt="Sharansho Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                /> */}
+              <span className="text-2xl font-bold text-black">Sharansho</span>
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="flex flex-wrap justify-center gap-8 text-black">
+              <Link href="#" className="hover:text-[#ff8e78] transition">
+                Home
+              </Link>
+              <Link href="#" className="hover:text-[#ff8e78] transition">
+                About
+              </Link>
+              <Link href="#" className="hover:text-[#ff8e78] transition">
+                Pricing
+              </Link>
+              {/* <Link href="#" className="hover:text-[#ff8e78] transition">
+                Testimonials
+              </Link> */}
+            </nav>
+
+            {/* Social Links */}
+            <div className="flex gap-4">
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#ff8e78] transition">
+                Instagram
+              </Link>
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#ff8e78] transition">
+                Facebook
+              </Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#ff8e78] transition">
+                Twitter
+              </Link>
+            </div>
+          </div>
+          {/* Copyright */}
+          <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+            <p>Copyright © 2025 Sharansho</p>
+            <Link href="#" className="hover:text-[#ff8e78] transition">
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
+      </footer>
 
       {/* <Footer /> */}
     </div>
