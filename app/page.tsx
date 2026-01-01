@@ -28,16 +28,16 @@ export default function Home() {
       >
         <div className="p-4 md:p-8">
           {/* Navbar */}
-          <div className="max-w-[635px] mx-auto">
-            <nav className="bg-[#4d4d4d] rounded-[18px] flex items-center justify-between py-1 px-2 shadow-md">
+          <div className="max-w-[800px] mx-auto">
+            <nav className="bg-[#4d4d4d] rounded-[18px] flex items-center justify-between py-2 px-3 shadow-md">
               {/* Logo */}
               <div className="flex items-center space-x-2">
                 <Image
                   src="/images/logo.png"
                   alt="sharanso Logo"
-                  width={40}
-                  height={40}
-                  className="h-12 w-12 rounded-full"
+                  width={50}
+                  height={50}
+                  className="h-14 w-14 rounded-full"
                 />
               </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-8 w-8"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -65,34 +65,34 @@ export default function Home() {
               </div>
 
               {/* Navigation Links (Desktop) */}
-              <div className="hidden md:flex items-center space-x-1 text-white font-medium p-1 rounded-[15px] text-sm bg-[#3e3e3e]">
+              <div className="hidden md:flex items-center space-x-2 text-white font-medium p-2 rounded-[15px] text-base bg-[#3e3e3e]">
                 <Link
                   href="#"
-                  className=" px-5 py-1.5 rounded-[12px] border-[#4e4e4e] border-2"
+                  className=" px-6 py-2.5 rounded-[12px] border-[#4e4e4e] border-2"
                 >
                   About
                 </Link>
                 <Link
                   href="#"
-                  className=" px-5 py-1.5 rounded-[12px] border-[#4e4e4e] border-2"
+                  className=" px-6 py-2.5 rounded-[12px] border-[#4e4e4e] border-2"
                 >
                   Client
                 </Link>
                 <Link
                   href="#"
-                  className=" px-5 py-1.5 rounded-[12px] border-[#4e4e4e] border-2"
+                  className=" px-6 py-2.5 rounded-[12px] border-[#4e4e4e] border-2"
                 >
                   Testimonial
                 </Link>
                 <Link
                   href="#"
-                  className=" px-5 py-1.5 rounded-[12px] border-[#4e4e4e] border-2"
+                  className=" px-6 py-2.5 rounded-[12px] border-[#4e4e4e] border-2"
                 >
                   price
                 </Link>
                 <Link
                   href="#"
-                  className=" px-5 py-1.5 rounded-[12px] border-[#4e4e4e] border-2"
+                  className=" px-6 py-2.5 rounded-[12px] border-[#4e4e4e] border-2"
                 >
                   Work
                 </Link>
@@ -105,7 +105,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="px-5 py-3 rounded-[12px] bg-white text-black font-medium text-sm">
+                  <button className="px-6 py-3.5 rounded-[12px] bg-white text-black font-medium text-base">
                     Get the app
                   </button>
                 </Link>
@@ -166,8 +166,8 @@ export default function Home() {
               </span>
             </div> */}
 
-            <h1 className="text-4xl md:text-[213px] font-bold leading-tight md:leading-[1] text-3d">
-              Sharanso
+            <h1 className="text-4xl md:text-[213px] font-bold leading-tight md:leading-none">
+              Sharansho
             </h1>
 
             <p className="mt-16 text-base md:text-4xl max-w-md md:max-w-xl mx-auto text-white">
@@ -181,24 +181,9 @@ export default function Home() {
             </p>
 
             <div className="mt-15 flex flex-col justify-center items-center space-y-12">
-              {/* <div className="relative inline-block">
-                <Link href="">
-                  <button className="group flex items-center justify-evenly bg-white text-black font-medium rounded-2xl pl-6 pr-4 py-3 shadow-lg text-lg">
-                    Download app
-                    <span className="relative flex items-center justify-center ml-4 w-12 h-12 bg-[#ff8e78] text-white rounded-xl -rotate-45 group-hover:rotate-0 transition-all duration-300">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-45">
-                        <path d="M12 15V3" />
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                        <path d="m7 10 5 5 5-5" />
-                      </svg>
-                    </span>
-                  </button>
-                </Link>
-              </div> */}
-
               <div className="relative inline-block">
                 <Link href="">
-                  <button className="group flex items-center justify-evenly bg-white text-black font-medium rounded-2xl pl-6 pr-4 py-3 shadow-lg text-lg">
+                  <button className="group flex items-center justify-evenly bg-white text-black font-medium rounded-2xl pl-6 pr-4 py-2 shadow-lg text-lg">
                     Download app
                     <span className="relative flex items-center justify-center ml-4 w-12 h-12 bg-[#ff8e78] text-white rounded-xl -rotate-45 group-hover:rotate-0 transition-all duration-300">
                       <svg
