@@ -381,25 +381,25 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr className="border-b border-white">
-                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-white">News Details</td>
+                  <td className="p-6 text-center">5 Pre Day</td>
+                  <td className="p-6 text-center">Unlimited</td>
+                  <td className="p-6 text-center">Unlimited</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">Opinions</td>
+                  <td className="p-6 text-center">0</td>
+                  <td className="p-6 text-center">Unlimited</td>
+                  <td className="p-6 text-center">Unlimited</td>
+                </tr>
+                <tr className="border-b border-white">
+                  <td className="p-6 text-white">Content Save</td>
                   <td className="p-6 text-center">N/A</td>
                   <td className="p-6 text-center">N/A</td>
                   <td className="p-6 text-center">N/A</td>
                 </tr>
                 <tr className="border-b border-white">
-                  <td className="p-6 text-white">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                </tr>
-                <tr className="border-b border-white">
-                  <td className="p-6 text-white">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                  <td className="p-6 text-center">N/A</td>
-                </tr>
-                <tr className="border-b border-white">
-                  <td className="p-6 text-white">N/A</td>
+                  <td className="p-6 text-white">Profile Access</td>
                   <td className="p-6 text-center">N/A</td>
                   <td className="p-6 text-center">N/A</td>
                   <td className="p-6 text-center">N/A</td>
