@@ -366,7 +366,7 @@ export default function Home() {
       <section className="bg-[#ff796e] text-white m-4 rounded-2xl overflow-hidden">
         <div className="p-8 md:p-16">
           {/* Pricing Header */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-8 md:mb-12">
             Choose your favorite plan
           </h2>
 
