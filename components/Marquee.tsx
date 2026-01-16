@@ -22,7 +22,7 @@ export default function Marquee() {
     ];
 
     return (
-        <div className="overflow-hidden border-3 border-black rounded-2xl m-4 py-4">
+        <div className="overflow-hidden border-3 border-black rounded-2xl m-4 py-2 md:py-4">
             <style dangerouslySetInnerHTML={{
                 __html: `
           @keyframes marqueeScroll {
@@ -43,8 +43,8 @@ export default function Marquee() {
                 {[...Array(3)].map((_, setIndex) => (
                     <div key={setIndex} className="flex">
                         {categories.map((category, index) => (
-                            <div key={`${setIndex}-${index}`} className="inline-flex items-center mx-6">
-                                <span className="text-black text-2xl font-extrabold uppercase tracking-wide">
+                            <div key={`${setIndex}-${index}`} className="inline-flex items-center mx-3 md:mx-6">
+                                <span className="text-black text-base md:text-xl lg:text-2xl font-extrabold uppercase tracking-wide">
                                     {category}
                                 </span>
                                 <Image
@@ -52,7 +52,7 @@ export default function Marquee() {
                                     alt="separator"
                                     width={24}
                                     height={24}
-                                    className="mx-6"
+                                    className="mx-3 md:mx-6 w-4 h-4 md:w-6 md:h-6"
                                 />
                             </div>
                         ))}
